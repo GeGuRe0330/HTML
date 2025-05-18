@@ -1,0 +1,14 @@
+.loginCellSize input {
+    width: 250px;
+    height: 30px;
+}
+
+.input-img-button {
+    width: 80%;        
+    height: 40%;       
+    object-fit: contain; 
+    border: none;       
+    background: none;   
+    cursor: pointer;     
+    margin: 0 auto;
+  }

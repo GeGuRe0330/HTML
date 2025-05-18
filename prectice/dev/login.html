@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../css/base.css">
+    <link rel="stylesheet" href="./../css/login.css">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <table>
+            <!-- <caption>로그인</caption> -->
+            <p>로그인</p>
+            <tr>
+                <th class="loginCellSize"><input type="id" name="id" id="id" placeholder="아이디 or 이메일"></th>
+                <th rowspan="2"><input type="image" src="./../img/스크린샷 2025-05-07 오후 9.11.15.png" alt="로그인" class="input-img-button">
+                </th>
+
+            </tr>
+            <tr>
+                <td class="loginCellSize">
+                    <input type="password" name="pw" id="pw" placeholder="비밀번호">
+                </td>
+                <!-- <td></td> -->
+
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="remainLogin" id="remainLogin">
+                    <label for="remainLogin">로그인 상태 유지</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="idRemember" id="idRemember">
+                    <label for="idRemember">아이디 저장</label>
+                </td>
+
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <!-- <td></td> -->
+
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </table>
+    </div>
+
+
+</body>
+
+</html>

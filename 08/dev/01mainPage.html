@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<style>
+    body {
+        font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+    }
+
+    * {
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .wrap {
+        width: 1200px;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding: 10px;
+        background-color: antiquewhite;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    /* 헤더영역 */
+    header {
+        width: 100%;
+        height: 100px;
+        border: 1px dotted black;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        background-color: hsl(0, 0%, 100%);
+        width: 200px;
+        padding: 5px 10px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    form > input.search {
+        border: none;
+        outline: none;
+    }
+
+    form > i {
+        font-size: 1rem;
+        font-weight: 1200;
+        color: blue;
+    }
+
+    /* nav영역 */
+    nav {
+        width: 100%;
+        height: 40px;
+        border: 1px dotted black;
+        margin-bottom: 10px;
+    }
+
+    /* 메인 영역 */
+    main {
+        width: 100%;
+        border: 1px dotted rgb(255, 0, 0);
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    .main-section1 {
+        width: 100%;
+        border: 1px dotted black;
+        margin-bottom: 10px;
+        display: flex;
+        /* flex-direction: row;
+        flex-wrap: nowrap; */
+        justify-content: space-between;
+        /* align-items: center; */
+        padding: 10px;
+    }
+
+    .main-section1 > article {
+        width: 49%;
+        height: 100px;
+        border: 1px dotted black;
+    }
+
+    .main-section2 {
+        width: 100%;
+        border: 1px dotted black;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .main-section2 > article, .main-section2 > aside {
+        width: 49%;
+        height: 700px;
+        border: 1px dotted black;
+    }
+
+    .main-section2 > aside > article:nth-of-type(1){
+        width: 100%;
+        height: 49%;
+        border: 1px dotted black;
+        margin-bottom: 10px;
+    }
+
+    .main-section2 > aside > article:nth-of-type(2) {
+        width: 100%;
+        height: 45%;
+        border: 1px dotted black;
+    }
+
+    .advert {
+        width: 100%;
+        border: 1px dotted black;
+        position: relative;
+    }
+
+    .advert > .advert-content > img {
+        width: 30%;
+    }
+
+    .advert > .advert-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:  5px;
+    }
+
+    .advert > .advert-footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 5px;
+    }
+
+    .advert > i {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        color: red;
+    }
+
+    /* 푸터 영역 */
+    footer {
+        width: 100%;
+        height: 100px;
+        border: 1px dotted black;
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <header>
+            <p> &lt;header&gt;</p>
+            <form method='get' action='#'>
+                <input type='search' name='search' placeholder='Search. . .' class="search">
+                <i class="fa-solid fa-magnifying-glass" onclick="alert('검색버튼이벤트발생')"></i>
+            </form>
+        </header>
+
+        <nav>
+            <p> &lt;nav&gt;</p>
+        </nav>
+
+        <main>
+            <p> &lt;main&gt;</p>
+            <section class="main-section1">
+                <article>
+                    <p> &lt;article1&gt;</p>
+                </article>
+                <article>
+                    <p> &lt;article2&gt;</p>
+                </article>
+            </section>
+
+            <section class="main-section2">
+                <article>
+                    <p> &lt;article3&gt;</p>
+                </article>
+                <aside>
+                    <p> &lt;aside&gt;</p>
+                    <article>
+                        <p> &lt;광고 article&gt;</p>
+                    </article>
+                    <article>
+                        <p> &lt;광고 article2&gt;</p>
+                        <div class="advert">
+                            <h2>당일채취 당일발송 자연산 참두릅</h2>
+                            <div class="advert-content">
+                                <img src="./../img/스크린샷 2025-05-09 오후 2.32.18.png" alt="자연산두릅">
+                                <p>당일채취 당일 발송 자연산 참두릅</p>
+                            </div>
+                            <div class="advert-footer">
+                                <p>홍천마을</p>
+                                <p>지금 구매하기</p>
+                            </div>
+                            <i class="fa-solid fa-circle-xmark"></i>
+                        </div>
+                    </article>
+                </aside>
+            </section>
+        </main>
+
+        <footer>
+            <p> &lt;footer&gt;</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

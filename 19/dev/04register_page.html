@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0 auto;
+            box-sizing: border-box;
+            font-size: large;
+        }
+
+        body {
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+            width: 1120px;
+            margin: 10px auto;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        .wrap {
+            width: 95%;
+            border: 3px dotted red;
+        }
+
+
+        /* 테이블 스타일 */
+        table,
+        tr,
+        td {
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        tr>td:nth-of-type(1) {
+            width: 15%;
+            background-color: rgb(242, 242, 242);
+            border: 1px solid black;
+            font-weight: bold;
+        }
+
+        td {
+            width: 85%;
+            border: 1px solid black;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 10px;
+        }
+
+        fieldset {
+            border: 3px dotted green;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+
+        legend {
+            font-weight: bold;
+            text-align: left;
+            margin-left: 0;
+        }
+
+        input {
+            border: 3px solid brown;
+        }
+
+        /* 헤더부분 */
+
+        /* 메인부분 */
+
+        /* 발 부분 */
+        img {
+            width: 30%;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        li {
+            background-color: blanchedalmond;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>회&nbsp;&nbsp;&nbsp;원&nbsp;&nbsp;&nbsp;가&nbsp;&nbsp;&nbsp;입</h1>
+        <form method='get' action='#'>
+            <header>
+                <fieldset>
+                    <legend class="startLegnd">사이트 이용정보 입력</legend>
+                    <table>
+                        <tr>
+                            <td>아이디</td>
+                            <td>
+                                <p>영문자, 숫자, _만 입력 가능. 최소 3자 이상 입력하세요.</p>
+                                <input type="text" name="id" id="id">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>비밀번호</td>
+                            <td><input type="password" name="pwd" id="pwd"></td>
+                        </tr>
+                        <tr>
+                            <td>비밀번호 확인</td>
+                            <td><input type="password" name="pwd2" id="pwd2"></td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </header>
+
+            <main>
+                <fieldset>
+                    <legend class="startLegnd">개인정보 입력</legend>
+                    <table>
+                        <tr>
+                            <td>이름</td>
+                            <td><input type="text" name="name" id="name"></td>
+                        </tr>
+                        <tr>
+                            <td>닉네임</td>
+                            <td>
+                                <p>공백없이 한글,영문,숫자만 입력 가능(4글자 이상) <br>
+                                    닉네임을 바꾸시면 앞으로 1일 이내에는 변경 할 수 없습니다.</p>
+                                <input type="text" name="nickname" id="nickname">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>E-mail</td>
+                            <td><input type="email" name="email" id="email"></td>
+                        </tr>
+                        <tr>
+                            <td>가입경로</td>
+                            <td>
+                                <label><input type="radio" name="regiPath" id="radioSearch">인터넷검색</label>
+                                <label><input type="radio" name="regiPath" id="bennerAd">베너광고</label>
+                                <label><input type="radio" name="regiPath" id="article">관련기사를 보고</label>
+                                <label><input type="radio" name="regiPath" id="homepage">미라지 홈페이지 보고</label>
+                                <label><input type="radio" name="regiPath" id="people">주변사람 소개</label>
+                                <label><input type="radio" name="regiPath" id="etc">기타</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>전화번호</td>
+                            <td><input type="text" name="homePhone" id="homePhone"></td>
+                        </tr>
+                        <tr>
+                            <td>휴대폰번호</td>
+                            <td><input type="text" name="phone" id="phone"></td>
+                        </tr>
+                        <tr>
+                            <td>생년월일</td>
+                            <td><input type="datetime-local" name="birth" id="birth"></td>
+                        </tr>
+                        <tr>
+                            <td>주소</td>
+                            <td>
+                                <input type="text" name="postalCode" id="postalCode">
+                                <button>주소 검색</button>
+                                <br>
+                                <label><input type="text" name="addr1" id="addr1">기본주소</label>
+                                <br>
+                                <label><input type="text" name="addr2" id="addr2">상세주소</label>
+                                <br>
+                                <label><input type="text" name="refer" id="refer">참고항목</label>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </main>
+
+            <footer>
+                <fieldset>
+                    <legend class="startLegnd">기타 개인설정</legend>
+                    <table>
+                        <tr>
+                            <td>카카오톡 메세지</td>
+                            <td>
+                                <label><input type="checkbox" name="kakaoAgree" id="kakaoAgree">
+                                        <b>
+                                            카카오톡 메세지를 받겠습니다.
+                                            <span style="color: red;">
+                                                >수신체크를
+                                                하시면 세일 소식을 가장 먼저 받아보실 수 있습니다.
+                                            </span>
+                                        </b>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>메일링서비스</td>
+                            <td>
+                                <label><input type="checkbox" name="mailAgree" id="mailAgree">정보 메일을 받겠습니다.</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>SMS 수신여부</td>
+                            <td>
+                                <label><input type="checkbox" name="smsAgree" id="smsAgree">휴대폰 문자메세지를 받겠습니다.</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>정보공개</td>
+                            <td>
+                                <p>정보공개를 바꾸시면 앞으로 0일 이내에는 변경이 안됩니다.</p>
+                                <label><input type="checkbox" name="infoAgree" id="infoAgree">다른 분들이 나의 정보를 볼 수 있도록
+                                    합니다.</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>자동등록방지</td>
+                            <td>
+                                <img src="./../images/스크린샷 2025-05-15 오후 5.28.24.png" alt="자동가입방지">
+                                <p>자동등록방지 숫자를 순서대로 입력하세요.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <div class="subButton">
+                    <input type="submit" value="회원가입">
+                    <input type="reset" value="취소">
+                </div>
+            </footer>
+        </form>
+    </div>
+</body>
+
+</html>

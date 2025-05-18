@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+    }
+
+    .container {
+        border: 1px solid black;
+        height: 300px;
+        width: 900px;
+        background-color: bisque;
+        overflow: hidden;
+    }
+
+    .box {
+        width: 100px;
+        height: 100px;
+        background-color: brown;
+        animation-name: moveBox;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation: moveBox 3s linear  infinite alternate ,moveBackgroundColor 3s linear infinite alternate;
+
+    }
+
+    @keyframes moveBox {
+        from{
+            transform: translateX(0);
+        }
+        to{
+            transform: translateX(800px);
+        }
+
+    }
+
+    @keyframes moveBackgroundColor {
+        0% {background-color: chartreuse;}
+        50% {background-color: antiquewhite;}
+        100% {background-color: blue;}
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box">
+
+        </div>
+    </div>
+    
+</body>
+</html>

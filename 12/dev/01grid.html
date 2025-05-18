@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+        height: 100vh;
+        /* 플랙스로 중앙 정렬 시키는 법 */
+        /* background-color: bisque;
+        display: flex;
+        align-items: center;
+        justify-content: center; */
+
+        /* 포지션으로 중앙 정렬 시키는 법 */
+        position: relative;
+    }
+
+    .container{
+        width: 900px;
+        border: 2px solid saddlebrown;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(3,2fr);
+        grid-template-rows: 100px 100px;
+        gap: 10px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%)
+    }
+
+    .item {
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item:nth-child(2n) {
+        background-color: burlywood;
+    }
+
+    .item:nth-child(2n+1) {
+        background-color: antiquewhite;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    
+</body>
+</html>

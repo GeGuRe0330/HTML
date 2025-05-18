@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+    }
+
+    .container {
+        width: 900px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 100px);
+        grid-template-areas: 
+        "item1 item1 item1"
+        "item2 item3 item3"
+        "item2 item4 item5";
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: red;
+        font-size: 2rem;
+        border-radius: 10px;
+    }
+    
+    .item1{
+        background-color: blue;
+        grid-area: item1;
+    }
+    .item2{
+        background-color:rgb(13, 224, 13);
+        grid-area: item2;
+    }
+    .item3{
+        background-color:rgb(30, 45, 142);
+        grid-area: item3;
+    }
+    .item4{
+        background-color:rgb(224, 13, 182);
+        grid-area: item4;
+    }
+    .item5{
+        background-color:rgb(224, 132, 13);
+        grid-area: item5;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="item item1">box1</div>
+        <div class="item item2">box2</div>
+        <div class="item item3">box3</div>
+        <div class="item item4">box4</div>
+        <div class="item item5">box5</div>
+    </div>
+    
+</body>
+</html>

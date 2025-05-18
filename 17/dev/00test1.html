@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>계산기</title>
+    <style>
+        body {
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+            font-family: sans-serif;
+            height: 200vh;
+            padding: 40px;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url(./../img/개구리\ 바탕화면.png);
+            
+        }
+
+        label,
+        input {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 317px;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+        }
+
+        #result {
+            font-weight: bold;
+            margin-top: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <label for="x">X</label>
+        <input type="text" id="x" placeholder="숫자 입력">
+
+        <label for="y">Y</label>
+        <input type="text" id="y" placeholder="숫자 입력">
+
+        <label for="result">결과</label>
+        <input type="text" id="result" readonly>
+
+        <div class="buttons">
+            <button onclick="calc('+')">+</button>
+            <button onclick="calc('-')">-</button>
+            <button onclick="calc('*')">x</button>
+            <button onclick="calc('/')">÷</button>
+            <button onclick="clearFields()">💣</button>
+        </div>
+    </div>
+
+    <script>
+        function calc(operator) {
+            const x = parseFloat(document.getElementById('x').value);
+            const y = parseFloat(document.getElementById('y').value);
+            let result = '';
+
+            if (isNaN(x) || isNaN(y)) {
+                result = '숫자를 입력하세요';
+            } else {
+                switch (operator) {
+                    case '+': result = x + y; break;
+                    case '-': result = x - y; break;
+                    case '*': result = x * y; break;
+                    case '/': result = y !== 0 ? Math.round((x / y) * 100) / 100.0 : '0으로 나눌 수 없음'; break;
+                }
+            }
+
+            document.getElementById('result').value = result;
+        }
+
+        function clearFields() {
+            document.getElementById('x').value = '';
+            document.getElementById('y').value = '';
+            document.getElementById('result').value = '';
+        }
+    </script>
+</body>
+
+</html>

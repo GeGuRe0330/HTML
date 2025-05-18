@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+        }
+
+        .wrap {
+            width: 1120px;
+            margin: 0 auto;
+            border: 3px dotted red;
+        }
+
+        form {
+            width: 600px;
+            margin: 0 auto;
+            border: 3px double black;
+            background-color: grey;
+        }
+
+        form input {
+            border: none;
+            outline: none;
+            border-bottom: 1px dashed black;
+            background-color: gray;
+        }
+
+        li input.notemail {
+            width: 350px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 10px;
+        }
+
+        ul > li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        li > label {
+            display: inline-block;
+            width: 120px;
+        }
+
+        li > span {
+            display: inline-block;
+        }
+
+        li > span > span {
+            visibility: hidden;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: aquamarine;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <form action="insert.do" method="post">
+            <ul>
+                <li><label for="id">아이디</label>
+                    <span>
+                        <input type="text" name="id" id="id" class="notemail"> <br>
+                        <span>정보알림</span>
+                </li>
+                </span>
+                <li><label for="pwd">페스워드</label>
+                    <span>
+                        <input type="password" name="pwd" id="pwd" class="notemail"> <br>
+                        <span id = "pwdInfo">정보알림</span>
+                </li>
+                </span>
+                <li><label for="pwdok">페스워드 확인</label>
+                    <span>
+                        <input type="password" name="pwdok" id="pwdok" class="notemail"> <br>
+                        <span>정보알림</span>
+                </li>
+                </span>
+                <li><label for="email">이메일</label> <input type="text" name="email" id="email">@<input type="text"
+                        name="email2" id="email2"></li>
+                <li><label for="addr">주소</label> <input type="text" name="addr" id="addr" class="notemail"></li>
+                <li><label for="addr">&nbsp;</label> <input type="text" name="addr2" id="addr2" class="notemail"></li>
+            </ul>
+            <input type="submit" value="가입">
+        </form>
+        <script>
+            // 패스워드를 클릭할 경우 정보 메세지가 나와야된다.
+            let pwd = document.querySelector('#id');
+            let pwdInfo = document.querySelector('#pwdInfo');
+
+            // 2 이벤트 
+            pwd.onclick = function (e) {
+                
+            }
+
+        </script>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+        body {
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <button id="popup">팝업창열기</button>
+    </div>
+    <script>
+        // 1. 객체를 찾는다
+        let popup = document.querySelector("#popup");
+        let windowObject;
+
+        // 2. 해당된 객체의 [ 속성, context, style, 이벤트 ]
+        popup.onclick = function(e) {
+            windowProxy = window.open('02event.html', 'event', 'width = 700, height = 500, left = 100, top = 100');
+            if(windowProxy === null) {
+                window.alert("팝업창을 허용해주세요!");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* * {
+            margin: 0 auto;
+            box-sizing: border-box;
+        } */
+
+        body {
+            width: 1150px;
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+        }
+
+        header,
+        main {
+            height: 500px;
+            border: 2px solid black;
+        }
+
+
+        /* 헤더 부분 */
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        /* 메인 부분 */
+
+        /* 푸터 부분 */
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <form method='get' action='#'>
+
+            <ul>
+                <li>
+                    <label for="name">고객명 : </label><input type="text" name="name" id="name">
+                </li>
+                <li>
+                    <label for="phone">전화번호 : </label><input type="text" name="phone" id="phone">
+                </li>
+                <li>
+                    <label for="email">E-mail : </label><input type="email" name="email" id="email">
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <label for="pizza">피자선택 : </label>
+                    <select name="pizza" id="pizza">
+                        <option value="default">피자를 선택하세요</option>
+                        <option value="1">치즈 퐁듀 파이어 미트</option>
+                        <option value="2">블록버스터4</option>
+                        <option value="3">글로벌 레전드4</option>
+                        <option value="4">블랙앵거스 스테이크</option>
+                        <option value="5">베스트 콰트로</option>
+                        <option value="6">블랙타이거 슈림프</option>
+                    </select>
+                </li>
+            </ul>
+
+            <ul>
+                <fieldset>
+                    <legend>피자 사이즈</legend>
+                    <label><input type="radio" name="Small" id="s"> Small</label> <br>
+                    <label><input type="radio" name="Medium" id="m"> Mediu</label> <br>
+                    <label><input type="radio" name="Large" id="l">Large</label> <br>
+                </fieldset>
+                <fieldset>
+                    <legend>토핑 선택</legend>
+                    <label> <input type="checkbox" name="toping" id="toping1"> 베이컨</label> <br>
+                    <label> <input type="checkbox" name="toping" id="toping2"> 치즈</label> <br>
+                    <label> <input type="checkbox" name="toping" id="toping3"> 양파</label> <br>
+                    <label> <input type="checkbox" name="toping" id="toping4"> 버섯</label> <br>
+                </fieldset>
+            </ul>
+
+            <ul>
+            <li>
+                <label for="time">희망배송시간 : </label>
+                <input type="time" name="time" id="time">
+            </li>
+            <li>
+                <label for="memo">배송시 요청사항 : </label>
+                <textarea name="memo" id="memo" cols="30" rows="10"></textarea>
+            </li>
+            <li>
+                <input type="submit" name="submit" id="submit" value="주문하기">
+            </li>
+            </ul>
+        </form>
+
+
+    </div>
+</body>
+
+</html>

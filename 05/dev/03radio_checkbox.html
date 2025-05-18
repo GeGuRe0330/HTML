@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <form method='get' action='#'>
+            <fieldset>
+                <legend>개인정보입력하기1</legend>
+                <label for="hobby">당구</label><input type="radio" name="hobby" id="hobby1" value="당구">
+                <label for="hobby2">게임</label><input type="radio" name="hobby" id="hobby2" value="게임">
+                <label for="hobby3">영화</label><input type="radio" name="hobby" id="hobby3" value="영화">
+            </fieldset>
+            <fieldset>
+                <legend>개인정보입력하기2</legend>
+                <label for="hobbyck1">당구</label><input type="checkbox" name="hobbyck" id="hobbyck" value="당구">
+                <label for="hobbyck2">게임</label><input type="checkbox" name="hobbyck" id="hobbyck2" value="게임">
+                <label for="hobbyck3">영화</label><input type="checkbox" name="hobbyck" id="hobbyck3" value="영화">
+            </fieldset>
+            <fieldset>
+                <legend>막대바진행</legend>
+                <label for="range">현재 진행상황</label>
+                <input type="range" name="range" id="range" min="0" max="100" step="1" value="20">
+            </fieldset>
+            <fieldset>
+                <legend>숫자입력하기</legend>
+                <label for="age">당신의 나이: </label><input type="number" name="age" id="age" min="0" max="100" value="1">
+            </fieldset>
+            <!-- <input type="submit" value="전송"> -->
+            <input type="image" src="./images/login.png" alt="로그인" style="border: 2px; padding: 1px 6px; size: 26.672px 18px;"> 
+            <!-- 인라인은 몇가지 스타일이 적용되질 않는다 -->
+            <input type="reset" value="취소">
+            <input type="button" value="전송하기" onclick="window.alert('전송하는 알림창');">
+            <input type="button" value="새창열기" onclick="window.open('./01form.html');">
+        </form>
+    </div>
+    
+</body>
+</html>

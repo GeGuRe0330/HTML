@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .wrap {
+        text-align: center;
+        line-height: 300px;
+        font-size: xx-large;
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <h1>3의 배수 찾기</h1>
+
+        <script>
+            let num = parseInt(prompt('몇까지 3의 배수를 찾을까요?', '50'));
+
+            for (i = 1; i < num; i++) {
+                if (i * 3 > num) {
+                    break
+                } else {
+                    document.write(`${i * 3}, `);
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>
