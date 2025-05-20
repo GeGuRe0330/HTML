@@ -5,9 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>회원가입</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./css/memberjoin2.css">
-  <script src="./js/memberjoin.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/memberjoin.css">
+  <!-- html파일 헤드에 연결문 추가 -->
   <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </head>
 
@@ -16,18 +18,22 @@
     <div class="headline">
       <span>2025.5.15. 박강호</span>
       <span>회원가입</span>
+      <span></span>
     </div>
     <div class="signUp">
       <form method="get" action="#">
-        <h3>회 원 가 입</h3>
+        <h1>회 원 가 입</h1>
 
-        <h5>사이트 이용정보 입력</h5>
+        <h2>사이트 이용정보 입력</h2>
         <table>
-          <colgroup><col class="label" /><col /></colgroup>
+          <colgroup>
+            <col class="label" />
+            <col />
+          </colgroup>
           <tr>
             <td class="label">아이디</td>
             <td>
-              영문자, 숫자, _만 입력 가능. 최소 3자이상 입력하세요.<br />
+              영문자, 숫자, _만 입력 가능. 최소 3자이상 12자 이하만 입력하세요.<br />
               <input type="text" name="id" id="id" minlength="3" class="w-15" /> <span>js</span>
             </td>
           </tr>
@@ -43,7 +49,10 @@
 
         <h5>개인정보 입력</h5>
         <table>
-          <colgroup><col class="label" /><col /></colgroup>
+          <colgroup>
+            <col class="label" />
+            <col />
+          </colgroup>
           <tr>
             <td class="label">이름</td>
             <td><input type="text" name="name" id="name" class="w-15" /> <span>js</span></td>
@@ -81,15 +90,17 @@
           </tr>
           <tr>
             <td class="label">생년월일</td>
-            <td><input type="text" name="birthDay" id="birthDay" placeholder="연도-월-일" class="w-15" /> <span>js</span></td>
+            <td><input type="text" name="birthDay" id="birthDay" placeholder="연도-월-일" class="w-15" /> <span>js</span>
+            </td>
           </tr>
           <tr>
             <td class="label">주소</td>
             <td>
               <input type="text" name="zipcode" id="zipcode" class="w-10 margin-b-5" />
-              <button type="button" style="background-color: black; color: white;" id="addrSearch">주소 검색</button> <span>js</span><br />
+              <button type="button" style="background-color: black; color: white;" id="addrSearch">주소 검색</button>
+              <span>js</span><br />
               <input type="text" name="add1" id="addr1" class="w-50 margin-b-5" /> 기본주소<br />
-              <input type="text" name="add2" id="addr2" class="w-50 margin-b-5" /> 상세주소<br />
+              <input type="text" name="add2" id="add2" class="w-50 margin-b-5" /> 상세주소<br />
               <input type="text" name="add3" id="addr3" class="w-50 margin-b-5" /> 참고항목<br />
             </td>
           </tr>
@@ -97,13 +108,16 @@
 
         <h5>기타 개인설정</h5>
         <table>
-          <colgroup><col class="label" /><col /></colgroup>
+          <colgroup>
+            <col class="label" />
+            <col />
+          </colgroup>
           <tr>
             <td class="label">카카오톡 메세지</td>
             <td class="checkbox-group">
               <input type="checkbox" name="receiveMsg" id="receiveMsg" />
-              <p><strong>카카오톡 메세지를 받겠습니다.</strong></p>
-              <p style="color: red"> > 수신체크를 하시면 세일 소식을 가장 먼저 받아보실 수 있습니다. </p>
+              <span><strong>카카오톡 메세지를 받겠습니다.</strong></span>
+              <span style="color: red"> > 수신체크를 하시면 세일 소식을 가장 먼저 받아보실 수 있습니다. </span>
             </td>
           </tr>
           <tr>
@@ -121,20 +135,20 @@
           <tr>
             <td class="label">정보공개</td>
             <td class="checkbox-group">
-              개굴🐸.<br />
+              정보공개를 바꾸시면 앞으로 0일 이내에는 변경이 안됩니다.<br />
               <input type="checkbox" name="openInfo" id="openInfo" /> 다른분들이 나의 정보를 볼 수 있도록 합니다.
             </td>
           </tr>
           <tr>
             <td class="label">자동등록방지</td>
-            <td style="display: flex; align-items: start; gap: 10px">
+            <td class="auto-prevent">
               <img src="./image/capcha.jpg" alt="자동등록방지 이미지" style="width: 100px; border: 1px dotted black;" />
               <div class="fa-icon-group">
-                <i class="fa-solid fa-volume-high" style="margin-bottom: 5px;"></i>
+                <i class="fa-solid fa-volume-high"></i>
                 <i class="fa-solid fa-rotate-right"></i>
               </div>
               <div>
-                <input type="text" name="checkHuman" id="checkHuman" style="width: 150px;height: 50px; font-size: x-large;" maxlength="10"/><br />
+                <input type="text" name="checkHuman" id="checkHuman" maxlength="10" /><br />
                 자동등록방지 숫자를 순서대로 입력하세요.
               </div>
             </td>
@@ -142,12 +156,13 @@
         </table>
 
         <div class="buttons">
-          <button type="submit" class="btn-primary" value="signUp" id="signUp">회원가입</button>
-          <button type="reset" class="btn-secondary" id="reset">취소</button>
+          <button type="submit" class="btn-primary" value="signUp">회원가입</button>
+          <button type="reset" class="btn-secondary">취소</button>
         </div>
       </form>
     </div>
   </div>
+  <script src="./js/memverjoin.js" defer></script>
 </body>
 
 </html>
